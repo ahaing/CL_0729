@@ -85,8 +85,14 @@ dataFrame['啟始時間'] = pd.to_datetime(dataFrame['啟始時間'])
 dataFrame['結束時間'] = pd.to_datetime(dataFrame['結束時間'])
 dataFrame['啟始時間'] = dataFrame['啟始時間'].dt.strftime('%Y-%m-%d日-%H點')
 dataFrame['結束時間'] = dataFrame['結束時間'].dt.strftime('%Y-%m-%d日-%H點')
+dataFrame['Tmax'] = dataFrame['Tmax'].astype(int)
+dataFrame['Tmin'] = dataFrame['Tmin'].astype(int)
 
 # 更改 streamlit 外觀樣式: dataFrame.style.highlight_max -> subset
+style = dataFrame.style.highlight_max(subset=['最高溫度'],axis=0) # 黃色預設
+
+# style 裡面: props= -> 是 css 的語法
+style = dataFrame.style.highlight_max(subset=['最高溫度'],axis=0) # background color, font coloer
 
 
 
