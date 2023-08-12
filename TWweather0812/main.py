@@ -73,3 +73,11 @@ if not check_file_exist():
     is_save = save_csv(csv_list,get_fileName_path())
     if is_save:
         print("存檔成功")  
+
+file_path = get_fileName_path()
+dataFrame = pd.read_csv(file_path)
+#顯示標題
+st.title("台灣個縣市氣候:")
+st.subheader("攝氐")
+#顯非DataFrame
+st.dataframe(dataFrame,width=800,height=900)        
