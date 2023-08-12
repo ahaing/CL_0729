@@ -4,6 +4,7 @@ from datetime import datetime
 import pytz
 import os
 import pandas as pd
+import streamlit
 
 def download_data()->dict:
     url = 'https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=rdec-key-123-45678-011121314&format=JSON'
