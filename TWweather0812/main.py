@@ -90,6 +90,8 @@ dataFrame['Tmin'] = dataFrame['Tmin'].astype(int)
 
 # 更改 streamlit 外觀樣式: dataFrame.style.highlight_max -> subset
 style = dataFrame.style.highlight_max(subset=['最高溫度'],axis=0) # 黃色預設
+style = dataFrame.style.highlight_max(subset=['最高溫度'],axis=0,props="color:white;background-color:red;")
+style = style.highlight_max(subset=['最低溫度'],axis=0,props="color:white;background-color:blue;")
 
 # style 裡面: props= -> 是 css 的語法
 style = dataFrame.style.highlight_max(subset=['最高溫度'],axis=0) # background color, font coloer
