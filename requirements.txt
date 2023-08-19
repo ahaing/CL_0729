@@ -2,3 +2,4 @@
 requests 
 # 自己選
 # pip install --upgrade pip
+# https://pmorissette.github.io/ffn/
