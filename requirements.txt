@@ -1,3 +1,4 @@
 # 以這個檔名名字安裝不同套件，再重新安裝上去
 requests 
 # 自己選
+# pip install --upgrade pip
